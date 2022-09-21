@@ -25,8 +25,9 @@ export const UserName = styled.p`
   line-height: 0rem;
   align-items: center;
   text-align: center;
-  color: ${colors.white};
+  color: #880ED4;
   font-weight: 600;
+  margin-left: 0.5rem;
 `;
 
  const UserId = styled.p`
@@ -36,14 +37,7 @@ export const UserName = styled.p`
   color: ${colors.gray};
   font-weight: 500;
   font-size: 0.900rem;
-  padding-left: 0.125rem;
-`;
-
-const Icon = styled.img`
-  width: 1.325vw;
-`;
-const IconContainer = styled.div`
-  padding: 0.125rem;
+  padding-left: 1.125rem;
 `;
 
 const NameFormat = styled.div`
@@ -57,8 +51,7 @@ const BodyContainer = styled.div`
   
 `;
 const Body = styled.p`
-margin-top: -1.225vh;
-margin-left: 5vw;
+margin-left: 1rem;
 align-items: center;
 text-align: left;
 color: ${colors.white};
@@ -78,9 +71,6 @@ export default function CardPublish({ src, body, userId, icon, name, id, onClick
           {name}
           {" "}
         </UserName>
-        <IconContainer>
-        <Icon src={icon}/>
-        </IconContainer>
         <UserId>{userId}</UserId>
       </NameFormat>
       

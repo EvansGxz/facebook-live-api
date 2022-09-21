@@ -1,17 +1,9 @@
 import styled from "@emotion/styled";
 import CardPublish from "../components/Card/card";
 import { colors } from "../styles/colors";
-
-const Text = styled.p`
-margin-top: -1.225vh;
-margin-left: 5vw;
-align-items: center;
-text-align: left;
-color: ${colors.white};
-font-weight: 500;
-font-size: 0.900rem;
-padding-left: 0.125rem;
-`;
+import { get } from "axios";
+import { useEffect } from "react";
+import { BASE_URL } from "../config";
 
 const Body = styled.div`
   width: 100%;
@@ -24,14 +16,14 @@ const Body = styled.div`
 
 function HomePage(){
   
+  useEffect(() => {
+    get(BASE_URL).then((response) =>console.log(response)).catch((error) => console.log(error))
+  }, []);
 
   return  <Body>
   <CardPublish
   id= "1"
   name="Evans Glz"
-  
-  onClick={()=>console.log("hola")}
-
   userId="@EvansGxz"
   body="Deserunt esse cillum anim proident qui. Ipsum ut minim quis irure est sunt velit ipsum nostrud non commodo ut ipsum nulla. Pariatur tempor reprehenderit sunt reprehenderit veniam."
   />
